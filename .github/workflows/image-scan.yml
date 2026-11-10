@@ -17,13 +17,13 @@ on:
       - litellm_cli/**
       - backend/main.py
       - backend/routes/allowlist.py
-      - litellm-rust/**
+      - litellm/rust/**
       - litellm/proxy/lens/**
       - litellm/proxy/prisma_migration.py
       - litellm/proxy/admin_mcp.py
       - litellm/proxy/proxy_server.py
       - pyproject.toml
-      - litellm-proxy-extras/**
+      - litellm/proxy-extras/**
       - tests/integration/database/image/**
       - uv.lock
       - litellm/ui/litellm-dashboard/package-lock.json
