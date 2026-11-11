@@ -2,6 +2,7 @@
 ## Helper utilities
 import copy
 import logging
+import math
 import re
 from collections.abc import Collection, Iterable, Iterator, Mapping
 from types import MappingProxyType
@@ -55,6 +56,12 @@ _DROP_PARAMS_BOOL: Final = TypeAdapter(bool)
 
 def as_str_mapping(value: object) -> Mapping[str, object] | None:
     return value if isinstance(value, Mapping) else None
+
+
+def finite_cost(value: object) -> float | None:
+    if isinstance(value, bool) or not isinstance(value, int | float) or not math.isfinite(value):
+        return None
+    return float(value)
 
 
 @runtime_checkable
